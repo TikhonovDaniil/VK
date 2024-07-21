@@ -1,11 +1,27 @@
 # VK
-Для успешного выполнения практического задания тебе необходимо придумать и разработать тесты на API-метод "Одноклассников".
-На выбор предоставляются следующие три метода, Тебе нужно выбрать только один для покрытия тестами:
+Из-за ошибки авторизации 
+"Не указан обязательный параметр client_id"
+неудалось выполнить запрос. Ввиду ошибки вместо кода высылаю набор тест-кейсов:
+Тест кейс 1
+Получение ошибки 403 с пустыми полями авторизации
+Выполнить POST запрос с пустым полем авторизации
+Проверить, что status code = 403
 
-https://apiok.ru/dev/methods/rest/group/group.getCounters (<-- выбранный)
+Тест кейс 2
+Получение ошибки 403 неверный пароль
+Выполнить POST запрос с неверным паролем 
+Проверить, что status code = 403
 
-https://apiok.ru/dev/methods/rest/group/group.getUserGroupsV2
+Параметризированный Тест кейс 3
+Получение ошибки 400 не указан обязательный параметр [group_id, counterTypes]
+Выполнить POST запрос без обязательных параметров
+Проверить, что status code = 400
 
-https://apiok.ru/dev/methods/rest/photos/photos.editPhoto
+Параметризированный тест кейс 4 
+Получение счетчиков группы  [themes, photo_albums, members videos, presents, links, moderators, join_requests, black_list, maybe, photos, всех счетчиков]
 
-Постарайся как можно тщательнее протестировать выбранный метод, рассмотрев его работу с разных сторон.
+<counterTypes> = [themes, photo_albums, members videos, presents, links, moderators, join_requests, black_list, maybe, photos, всех счетчиков]
+
+Выполнить POST запрос с counterTypes = [<counterTypes>]
+Проверить, что status code = 200
+Проверить, что <counterTypes> в теле ответа не пустой

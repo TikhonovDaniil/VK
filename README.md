@@ -23,10 +23,10 @@
 
 **Параметризированный тест кейс 4**
 
-Получение счетчиков группы  [themes, photo_albums, members videos, presents, links, moderators, join_requests, black_list, maybe, photos, всех счетчиков]
+Получение счетчиков группы [themes, photo_albums, members videos, presents, links, moderators, join_requests, black_list, maybe, photos, всех счетчиков]
 
-<counterTypes> = [themes, photo_albums, members videos, presents, links, moderators, join_requests, black_list, maybe, photos, всех счетчиков]
+counterTypes = [themes, photo_albums, members videos, presents, links, moderators, join_requests, black_list, maybe, photos, всех счетчиков]
 
-Выполнить POST запрос с counterTypes = [<counterTypes>]\
+Выполнить POST запрос с counterTypes = [counterTypes]\
 Проверить, что status code = 200\
 Проверить, что <counterTypes> в теле ответа не пустой

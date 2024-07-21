@@ -27,6 +27,6 @@
 
 counterTypes = [themes, photo_albums, members videos, presents, links, moderators, join_requests, black_list, maybe, photos, всех счетчиков]
 
-Выполнить POST запрос с counterTypes = [counterTypes]\
+Выполнить POST запрос с counterTypes = [counterTypes[i]]\
 Проверить, что status code = 200\
 Проверить, что <counterTypes> в теле ответа не пустой
